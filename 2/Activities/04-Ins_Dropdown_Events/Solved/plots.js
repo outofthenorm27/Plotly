@@ -1,6 +1,6 @@
 // Initializes the page with a default plot
 function init() {
-  data = [{
+ var data = [{
     x: [1, 2, 3, 4, 5],
     y: [1, 2, 4, 8, 16] }];
   Plotly.newPlot("plot", data);
@@ -19,6 +19,7 @@ function updatePlotly() {
   // Initialize x and y arrays
   var x = [];
   var y = [];
+  
 
   if (dataset === 'dataset1') {
     x = [1, 2, 3, 4, 5];
@@ -31,6 +32,7 @@ function updatePlotly() {
   }
 
   // Note the extra brackets around 'x' and 'y'
+
   Plotly.restyle("plot", "x", [x]);
   Plotly.restyle("plot", "y", [y]);
 }
